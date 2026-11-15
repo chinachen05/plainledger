@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://plainledger.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://plainledger.vercel.app/tools</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://plainledger.vercel.app/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://plainledger.vercel.app/editorial-policy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://plainledger.vercel.app/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://plainledger.vercel.app/terms</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://plainledger.vercel.app/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/zero-based-budgeting-every-dollar-assigned</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/50-30-20-rule-when-it-works-and-adjustments</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/sinking-funds-eliminating-predictable-surprises</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/cash-flow-calendar-matching-paychecks-to-bills</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/subscription-audit-annual-creep-math</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/emergency-fund-sizing-3-vs-6-vs-12-months</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/high-yield-savings-apy-vs-apr-compounding</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/cd-ladders-vs-treasury-bills-liquidity</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/automating-savings-pay-yourself-first-mechanics</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/inflation-drag-on-idle-cash-purchasing-power</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/debt-avalanche-vs-snowball-interest-math</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/credit-utilization-ratio-30-percent-myth</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/balance-transfer-0-apr-fee-breakeven-math</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/amortization-schedules-how-early-payments-cut-interest</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/good-debt-vs-bad-debt-return-threshold</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/compound-interest-rule-of-72-explained</loc><priority>0.9</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/index-funds-vs-active-funds-expense-ratio-drag</loc><priority>0.9</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/dollar-cost-averaging-vs-lump-sum-math</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/asset-allocation-stocks-bonds-rebalancing</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/dividend-reinvestment-drip-total-return</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/sequence-of-returns-risk-early-retirement</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/marginal-vs-effective-tax-rate-brackets</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/roth-vs-traditional-tax-arbitrage</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/employer-401k-match-instant-return-math</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/hsa-triple-tax-advantage-stealth-retirement</loc><priority>0.8</priority></url>
+  <url><loc>https://plainledger.vercel.app/articles/term-life-vs-whole-life-insurance-cost-gap</loc><priority>0.8</priority></url>
+</urlset>
