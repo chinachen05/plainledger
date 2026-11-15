@@ -1,19 +1,32 @@
-import { useCallback, useEffect, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useState } from 'react';
 import { getArticleBySlug } from './data/articles';
 import { CalculatorId } from './data/articleTypes';
 import { Navbar } from './components/Navbar';
 import { HomePage } from './components/HomePage';
-import { ArticleView } from './components/ArticleView';
-import { CalculatorsHub } from './components/CalculatorsHub';
-import {
-  AboutPage,
-  ContactPage,
-  EditorialPolicyPage,
-  PrivacyPolicyPage,
-  TermsPage,
-} from './components/TrustPages';
 import { Footer } from './components/Footer';
 import { CookieBanner } from './components/CookieBanner';
+
+const ArticleView = lazy(() =>
+  import('./components/ArticleView').then((m) => ({ default: m.ArticleView }))
+);
+const CalculatorsHub = lazy(() =>
+  import('./components/CalculatorsHub').then((m) => ({ default: m.CalculatorsHub }))
+);
+const AboutPage = lazy(() =>
+  import('./components/TrustPages').then((m) => ({ default: m.AboutPage }))
+);
+const EditorialPolicyPage = lazy(() =>
+  import('./components/TrustPages').then((m) => ({ default: m.EditorialPolicyPage }))
+);
+const PrivacyPolicyPage = lazy(() =>
+  import('./components/TrustPages').then((m) => ({ default: m.PrivacyPolicyPage }))
+);
+const TermsPage = lazy(() =>
+  import('./components/TrustPages').then((m) => ({ default: m.TermsPage }))
+);
+const ContactPage = lazy(() =>
+  import('./components/TrustPages').then((m) => ({ default: m.ContactPage }))
+);
 
 function updateSeoHead(title: string, description: string, pathname: string) {
   document.title = title;
@@ -41,23 +54,26 @@ export default function App() {
   const navigate = useCallback((target: string) => {
     const [rawPath, hash] = target.split('#');
     const cleanPath = rawPath || '/';
+    const currentFull = `${window.location.pathname}${window.location.hash}`;
 
-    if (cleanPath !== window.location.pathname) {
+    if (target !== currentFull) {
       window.history.pushState({}, '', target);
+    }
+    if (cleanPath !== path) {
       setPath(cleanPath);
     }
 
     if (hash) {
-      requestAnimationFrame(() => {
+      window.setTimeout(() => {
         const el = document.getElementById(hash);
         if (el) {
           el.scrollIntoView({ behavior: 'smooth' });
         }
-      });
+      }, 60);
     } else {
       window.scrollTo({ top: 0, behavior: 'auto' });
     }
-  }, []);
+  }, [path]);
 
   useEffect(() => {
     const onPopState = () => {
@@ -67,7 +83,6 @@ export default function App() {
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
-  // Determine active route
   const normalizedPath = path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path;
   const articleMatch = normalizedPath.startsWith('/articles/')
     ? getArticleBySlug(normalizedPath.replace('/articles/', ''))
@@ -177,7 +192,17 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FBF9F5] text-[#1C1917]">
       <Navbar currentPath={normalizedPath} onNavigate={navigate} />
-      <div className="flex-1">{content}</div>
+      <div className="flex-1">
+        <Suspense
+          fallback={
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 text-sm text-[#57534E]">
+              Loading page...
+            </div>
+          }
+        >
+          {content}
+        </Suspense>
+      </div>
       <Footer onNavigate={navigate} />
       <CookieBanner onNavigate={navigate} />
     </div>
